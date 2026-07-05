@@ -2,6 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+import Link from "next/link";
 import { patterns } from "@/data/patterns";
 import { PatternCard } from "@/components/PatternCard";
 import { Footer } from "@/components/Footer";
@@ -29,26 +30,26 @@ function PracticeContent() {
     <div className="min-h-screen">
       <header className="border-b border-[#e8dcc8] bg-[#fffaf2]">
         <div className="mx-auto max-w-3xl px-4 py-6">
-          <a href="/" className="text-xs text-[#8c4f2b] hover:underline">
+          <Link href="/" className="text-xs text-[#8c4f2b] hover:underline">
             ← 返回首頁
-          </a>
+          </Link>
           <h1 className="mt-2 text-xl font-bold text-[#3d2b1f]">選擇練習</h1>
           <p className="mt-1 text-xs text-[#6b5a48]">
             {mode === "self" ? "主角視角 · 你在關係情境中做選擇" : "治療師視角 · 你面對個案做臨床選擇"}
           </p>
           <div className="mt-3 flex gap-2">
-            <a
+            <Link
               href="/practice?mode=self"
               className={`rounded-md px-3 py-1 text-xs ${mode === "self" ? "bg-[#8c4f2b] text-white" : "text-[#6b5a48]"}`}
             >
               主角視角
-            </a>
-            <a
+            </Link>
+            <Link
               href="/practice?mode=therapist"
               className={`rounded-md px-3 py-1 text-xs ${mode === "therapist" ? "bg-[#8c4f2b] text-white" : "text-[#6b5a48]"}`}
             >
               治療師視角
-            </a>
+            </Link>
           </div>
         </div>
       </header>

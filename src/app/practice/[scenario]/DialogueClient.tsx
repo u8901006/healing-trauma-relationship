@@ -2,6 +2,7 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useCallback, Suspense } from "react";
+import Link from "next/link";
 import type { ScenarioScript, Mode, EngineState, DialogueChoice } from "@/lib/types";
 import { getScript } from "@/data/scripts";
 import { getPattern } from "@/data/patterns";
@@ -130,12 +131,12 @@ function DialogueContent({ scenario }: { scenario: string }) {
             >
               我了解，開始練習
             </button>
-            <a
+            <Link
               href={`/practice?mode=${mode}`}
               className="text-xs text-[#b8a88f] hover:text-[#8c4f2b]"
             >
               返回選擇練習
-            </a>
+            </Link>
           </div>
         </div>
         <Footer />

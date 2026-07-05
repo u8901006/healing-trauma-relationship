@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { DialogueEnding, Mode } from "@/lib/types";
 
 export function ReviewSummary({
@@ -78,18 +79,18 @@ export function ReviewSummary({
       </div>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-        <a
+        <Link
           href="/practice"
           className="rounded-lg bg-[#8c4f2b] px-6 py-2.5 text-center text-sm font-semibold text-white transition-opacity hover:opacity-90"
         >
           選擇其他練習
-        </a>
-        <a
+        </Link>
+        <Link
           href="/"
           className="rounded-lg border border-[#e8dcc8] bg-[#fffaf2] px-6 py-2.5 text-center text-sm font-medium text-[#6b5a48] transition-colors hover:bg-[#f6f1e8]"
         >
           返回首頁
-        </a>
+        </Link>
       </div>
     </div>
   );

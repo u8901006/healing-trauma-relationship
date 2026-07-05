@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { AttachmentPattern } from "@/lib/types";
 
 export function PatternCard({
@@ -14,7 +15,7 @@ export function PatternCard({
   const href = `/practice/${pattern.id}-${mode}`;
 
   return (
-    <a
+    <Link
       href={href}
       className="group block rounded-xl border border-[#e8dcc8] bg-[#fffaf2] p-5 transition-all hover:border-[#8c4f2b] hover:shadow-md"
     >
@@ -29,6 +30,6 @@ export function PatternCard({
       <p className="mt-3 text-xs font-medium text-[#8c4f2b] group-hover:underline">
         開始練習 →
       </p>
-    </a>
+    </Link>
   );
 }

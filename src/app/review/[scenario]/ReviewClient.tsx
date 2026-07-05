@@ -2,6 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState, Suspense } from "react";
+import Link from "next/link";
 import type { DialogueEnding, Mode } from "@/lib/types";
 import { getPattern } from "@/data/patterns";
 import { ReviewSummary } from "@/components/ReviewSummary";
@@ -48,9 +49,9 @@ function ReviewContent({ scenario }: { scenario: string }) {
       <div className="flex min-h-[60vh] items-center justify-center">
         <div className="text-center">
           <p className="text-sm text-[#6b5a48]">找不到練習結果</p>
-          <a href="/practice" className="mt-2 inline-block text-xs text-[#8c4f2b] hover:underline">
+          <Link href="/practice" className="mt-2 inline-block text-xs text-[#8c4f2b] hover:underline">
             返回練習清單
-          </a>
+          </Link>
         </div>
       </div>
     );
